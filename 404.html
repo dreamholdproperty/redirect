@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            // Получаем путь после домена
+            var path = window.location.pathname;
+            // Перенаправляем на тот же путь на новом домене
+            window.location.replace("https://dreamhold.org" + path);
+        </script>
+        <title>Redirecting...</title>
+    </head>
+    <body>
+        <p>Redirecting to <a id="redir" href="#">new domain</a>...</p>
+        <script>
+            document.getElementById("redir").href =
+                "https://dreamhold.org" + window.location.pathname;
+        </script>
+    </body>
+</html>
